@@ -9,25 +9,34 @@
 }
 
 .fondo{
-    background-color: #fefae0;
+    background-color: #283618;
 }
 
 h1{
-    color: #283618;
+    color: #fefae0;
     font-family:FuenteTitulo;
-    font-size:clamp(5rem,2vW,7rem);
-    font-weight: 150;
-    text-align: center;
+    font-size:clamp(3rem,4vW,5rem);
+    text-align: center; /*se alinea el titulo al centro*/
 }
 
-table{ /*es para que la tabla ocupe todo el ancho de la pagina*/
-    width: 100%;
+h2{
+    color: #fefae0;
+    font-family:FuenteTitulo;
+    font-size:clamp(2rem,3vW,4rem);
+    text-align: left; /*se alinea el subtitulo a la izquierda*/
 }
-table, th, td{  /*da formato a la tabla*/
+
+table{ /*se configura el tamaño de la tabla, la posicion y la fuente que se va a usar*/
+    width: 50%;  /*controla la anchura*/
+    margin-left: auto;    /*left y rigth se ponen en auto para que*/
+    margin-right: auto;   /*la tabla quede en el centro*/
     font-family: FuenteTexto;
-    border: 2px solid #283618;
-    border-collapse: collapse;
-    padding: 10px;
+}
+
+table, th, td{  /*da formato a la tabla, o sea la pone bonita*/
+    border: 3px solid #283618;
+    border-collapse: collapse;/*es para juntar los bordes de la tabla y que no esten separados*/
+    padding: 7px; /*es el relleno que va a tener cada celda de la tabla*/
 }
 
 th{ /*le da formato a la cabecera de la tabla*/
@@ -39,38 +48,52 @@ td{ /*le da formato a las celdas de datos de la tabla*/
     background-color: #ffffff;
 }
 
-ul{ /*le quita a la lista el circulo y le pone un fondo de color*/
-    list-style-type: none;
-    background-color: #606c38;
-    overflow: hidden;
-    margin: 1%;
-    padding: 5%;
+ul{ /*le da formato a la lista desordenada*/
+    list-style-type: none; /*quita viñeta*/
 }
 li a{
     font-family: FuenteTexto;
     float:left;/*es para que la lista se alinee a la izquierda*/
-    display: block;/*es para que los elementos se desplieguen como un bloque*/
-    color: #fefae0; /*delor del texto de la lista*/
-    text-align: center; /*alinear el texto*/
-    padding: 2%;
     text-decoration: none;/*quita la linea que indica que es hipervinculo*/
 }
-li a:hover{
-    background-color: #495327;
-}
+
 .desplegable{
     position: relative;
 }
 .submenu{
     display: none;
     position: absolute;
-
-    top: 100%;
-    left: 0;
-
-    flex-direction: column;
-    min-width: 160px;
 }
 .desplegable:hover .submenu{
     display: flex;
+}
+
+.boton:hover{
+    background-color: #fefae0;
+    color: #283618;
+}
+.boton{
+    background-color: #606c38;
+    color: #fefae0;
+
+    width: 10%;
+    content: 10%;
+    padding: 1%;
+
+    font-family: FuenteTexto;
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 2px solid #1e2b10;
+}
+a{
+    text-decoration: none;
+}
+.contenedor{
+    background-color: #bc6c25;
+    border:2px solid #fefae0;
+    padding: 2%;
+    width: 96%;
 }
