@@ -7,23 +7,26 @@
     font-family: FuenteTexto;
     src: url(Fonts/Short_Stack/ShortStack-Regular.ttf) format(truetype);
 }
-
-.fondo{
-    background-color: #283618;
+html{
+    height: 100%;
 }
-
+.fondo{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#283618, #606c38, #fefae0);
+}
 h1{
     color: #fefae0;
     font-family:FuenteTitulo;
     font-size:clamp(3rem,4vW,5rem);
     text-align: center; /*se alinea el titulo al centro*/
 }
-
 h2{
     color: #fefae0;
     font-family:FuenteTitulo;
     font-size:clamp(2rem,3vW,4rem);
     text-align: left; /*se alinea el subtitulo a la izquierda*/
+    margin: 2%;
 }
 
 table{ /*se configura el tamaño de la tabla, la posicion y la fuente que se va a usar*/
@@ -87,13 +90,57 @@ li a{
     margin-right: auto;
 
     border: 2px solid #1e2b10;
+    cursor: pointer;
 }
 a{
     text-decoration: none;
 }
-.contenedor{
-    background-color: #bc6c25;
-    border:2px solid #fefae0;
-    padding: 2%;
-    width: 96%;
+legend{/*fomrato de la leyenda de los formularios*/
+    font-family: FuenteTexto;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #18200f;
+    background-color: #606c38;
+    text-align: center;
+    padding: 5%;
+    border-radius: 50%;
+    border: 2px solid #fefae0;
+}
+.formulario{/*formato al contenedor del formulario*/
+    background-color: #606c38;
+    width: 20%; /*es el ancho del formulario*/
+    padding: 1%;
+    margin: 2%;
+    border-radius: 10%;
+}
+label{/*de la formato a la etiqueta del formulario*/
+    font-family: FuenteTexto;
+    color: #18200f;
+}
+.inputt{/*le da formato a la caja donde se ingresa el texto en el formulario*/
+    font-family: FuenteTexto;
+    color: #18200f;
+    width: 100%;
+}
+select{ /*le da formato al select del formulario*/
+    font-family: FuenteTexto;
+    color: #18200f;
+    width: 100%;
+}
+.boton_form{ /*es el boton de los formularios*/
+    background-color: #606c38;
+    color: #fefae0;
+    font-family: FuenteTexto;
+    width: 40%;
+    height: 30px;
+    border: 2px solid #1e2b10;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.boton_form:hover{
+    background-color: #fefae0;
+    color: #283618;
 }
