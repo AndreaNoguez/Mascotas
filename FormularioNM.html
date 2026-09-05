@@ -10,21 +10,26 @@
 </head>
 
 <body class="fondo">
-    <h2>Formulario para registrar una nueva mascota</h2>
+    <header>
+        <h1>
+            Guardería de Mascotas
+        </h1>
+    </header>
     <div>
         <!--Formulario para registrar a la mascota-->
         <form autocomplete="off">
             <fieldset class="formulario"><!--el formulario queda dentro de un campo-->
-                <legend>Datos de la mascota</legend>
-                <label for="nombre">Nombre:</label><br/>
+                <legend>Completa el siguiente formulario para registar una mascota</legend>
+                <p class="texto">Datos de la mascota.</p>
+                <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" class="inputt"
-                        placeholder="Nombre de la mascota" required="true"/><br/>
+                        placeholder="Nombre de la mascota" required="true"/>
 
-                <label for="edad">Edad:</label><br/>
+                <label for="edad">Edad:</label>
                 <input type="number" id="edad" min="0" max="30" class="inputt"
-                        name="edad" placeholder="Edad en años" required="true"/><br/>
+                        name="edad" placeholder="Edad" required="true"/>
                 
-                <label for="especie">Especie:</label><br/>
+                <label for="especie">Especie:</label>
                 <select id="especie" name="especie">
                     <option value="perro">Perro</option>
                     <option value="gato">Gato</option>
@@ -33,7 +38,7 @@
                     <option value="roedor">Roedor</option>
                 </select><br/><br/>
 
-                <label for="sexo">Sexo:</label><br/>
+                <label for="sexo">Sexo de la mascota:</label>
                 <input type="radio" name="sexo" value="hembra" required="true">
                 <label>Hembra</label>
                 <input type="radio" name="sexo" value="macho" required="true">
@@ -46,36 +51,35 @@
                 <label>Mascota muerta</label><br/><br/>
 
                 <label for="historia">Por favor escribe su historia:</label><br/>
-                <input type="text" id="historia"name="historia" class="inputt"
-                        minlength="50" maxlength="200" required="true"/><br/>
+                <textarea id="historia"name="historia" class="inputt-story"
+                        minlength="50" maxlength="200" required="true"></textarea>
                 <br><!--saltos de linea-->
-                <input type="submit" value="Registrar" class="boton_form"/>
-            </fieldset>
-        </form>
-        <!--Formulario del tutor-->
-        <form autocomplete="off">
-            <fieldset class="formulario"><!--el formulario queda dentro de un campo-->
-                <legend>Datos del tutor</legend>
-
-                <label for="nombretutor">Nombre:</label><br/>
-                <input type="text" id="nombretutor" name="nombretutor" class="inputt"
-                        placeholder="Nombre del tutor" required="true"/><br/>
                 
-                <label for="apellidotutor">Apellido:</label><br/>
-                <input type="text" id="apellidotutor" name="apellidotutor" class="inputt"
-                        placeholder="Apellido paterno del tutor" required="true"/><br/>
+                <p class="texto">Datos del padre o tutor.</p>
+                <label for="nombretutor">Nombre:</label>
+                <input type="text" id="nombretutor" name="nombretutor" class="inputt"
+                        placeholder="Nombre del tutor" required="true"/>
+                
+                <label for="apellidopaterno">Apellido Paterno:</label>
+                <input type="text" id="apellidopaterno" name="apellidopaterno" class="inputt"
+                        placeholder="Apellido paterno del tutor" required="true"/>
+                
+                <label for="apellidomaterno">Apellido Materno:</label>
+                <input type="text" id="apellidomaterno" name="apellidomaterno" class="inputt"
+                        placeholder="Apellido materno del tutor" required="true"/><br/><br/>
 
-                <label for="telefono">Telefono:</label><br/>
+                <label for="telefono">Telefono:</label>
                 <input type="tel" id="telefono" name="telefono" class="inputt"
                         placeholder="Numero de contacto" required="true"
-                        minlength="10" maxlength="10"/><br/>
+                        minlength="10" maxlength="10"/>
 
-                <label for="correo">Correo:</label><br/>
+                <label for="correo">Correo:</label>
                 <input type="email" id="correo" name="correo" class="inputt"
                         placeholder="Correo electrónico" required="true"/><br/>
 
                 <br><!--saltos de linea-->
                 <input type="submit" value="Registrar" class="boton_form"/>
+
             </fieldset>
         </form>
     </div>
